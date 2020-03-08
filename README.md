@@ -76,7 +76,7 @@ export default Page;
 
 
 | Property                               | Description                                   |
----------------------------------------------------------------------------------------- |
+| ---------------------------------- | ------------------------------------------------------------------ |
 | position `string`            | One of `top-left`, `top-middle`, `top-right`, `bottom-left`, `bottom-middle`, `bottom-right`. Default: `top-left`    |
 
 
