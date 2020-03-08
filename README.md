@@ -4,7 +4,7 @@
 Easy, Type safe & Lightweight push notification library for React.js.
 Writtin in TypeScript & compiled to JavaScript for robust code.
 
-<img align="right" src="https://imgur.com/YpzhAzC" alt="react-toast-notifications" />
+<img align="right" src="https://imgur.com/YpzhAzC.png" alt="react-push-notification" />
 
 
 ### Install
