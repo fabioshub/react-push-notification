@@ -1,0 +1,25 @@
+{
+  "name": "react-push-notification",
+  "version": "1.0.18",
+  "description": "React push notifications",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "bundleDependencies": false,
+  "devDependencies": {
+    "@types/react": "^16.9.21",
+    "typescript": "^3.7.5"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "scripts": {
+    "start": "tsc -w",
+    "build": "tsc && cp src/Notifications/Notification.css dist/Notifications/Notification.css",
+    "build:check": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "Fabio de Bruijn <fabiodebruijn@gmail.com>"
+}
