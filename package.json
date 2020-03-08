@@ -19,7 +19,8 @@
     "build:check": "tsc --noEmit"
   },
   "repository": {
-    "type": "git"
+    "type": "git",
+    "url": "https://github.com/fabioshub/react-push-notification"
   },
   "author": "Fabio de Bruijn <fabiodebruijn@gmail.com>"
 }
