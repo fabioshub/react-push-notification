@@ -8,6 +8,8 @@ Writtin in TypeScript & compiled to JavaScript for robust code.
 <img align="right" src="https://imgur.com/YpzhAzC.png" alt="react-push-notification" />
 
 
+
+
 ### Install
 
 ```bash
@@ -81,6 +83,7 @@ export default Page;
 | Property                               | Description                                   |
 | ---------------------------------- | ------------------------------------------------------------------ |
 | position `string`            | One of `top-left`, `top-middle`, `top-right`, `bottom-left`, `bottom-middle`, `bottom-right`. Default: `top-left`    |
+
 
 
 ## addNotification({Options}) argument properties
