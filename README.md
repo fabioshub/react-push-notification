@@ -1,4 +1,5 @@
 
+[![npm version](https://badgen.net/npm/v/react-push-notification)](https://www.npmjs.com/package/react-notifications-component)
 # React-push-notification
 
 Easy, Type safe & Lightweight push notification library for React.js.
