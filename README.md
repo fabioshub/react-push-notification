@@ -106,5 +106,6 @@ The addNotification() function takes an object as argument with the follow prope
 | title `string`                     | Required. Title of the push notification                           |
 | subtitle `string`                  | Optional. Subtitle of the push notification                        |
 | message `string`                   | Optional. Message of the push notification                         |
+| theme `string`                     | Optional. One of `darkblue`, `red`, `light`, `undefined`. Default: `undefined`   |
 | duration `number`                  | Optional. Duration of the push notification in ms. Default: 3000   |
 
