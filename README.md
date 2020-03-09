@@ -5,7 +5,7 @@
 Easy, Type safe & Lightweight push notification library for React.js.
 Writtin in TypeScript & compiled to JavaScript for robust code.
 
-![](https://gfycat.com/cheapradiantcrayfish.gif)
+![](https://gfycat.com/cheapradiantcrayfish)
 
 
 
