@@ -16,6 +16,7 @@
   "scripts": {
     "start": "tsc -w",
     "build": "tsc && cp src/Notifications/Notification.css dist/Notifications/Notification.css",
+    "publish": "git push && npm publish",
     "build:check": "tsc --noEmit"
   },
   "repository": {

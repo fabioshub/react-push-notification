@@ -5,8 +5,7 @@
 Easy, Type safe & Lightweight push notification library for React.js.
 Writtin in TypeScript & compiled to JavaScript for robust code.
 
-<img align="right" src="https://imgur.com/YpzhAzC.png" alt="react-push-notification" />
-
+![](https://gfycat.com/cheapradiantcrayfish.gif)
 
 
 
@@ -84,6 +83,7 @@ export default Page;
 | ---------------------------------- | ------------------------------------------------------------------ |
 | position `string`            | One of `top-left`, `top-middle`, `top-right`, `bottom-left`, `bottom-middle`, `bottom-right`. Default: `top-left`    |
 
+<img align="right" src="https://imgur.com/YpzhAzC.png" alt="react-push-notification" />
 
 
 ## addNotification({Options}) argument properties
