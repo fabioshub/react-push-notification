@@ -2,6 +2,7 @@
     position: fixed;
     display: flex;
     flex-direction: column;
+    z-index: 100000;
 }
 
 .rpn-notification-holder.top-left {

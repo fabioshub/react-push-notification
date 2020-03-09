@@ -26,8 +26,8 @@ class Notifications extends React.Component<Props> {
     const { position } = this.props;
     const classN: string = `rpn-notification-holder ${position || 'top-middle'} supertest`;
     return <div className={classN}>
-      {this.state.value.map((note: Notification): JSX.Element => {
-        return <PushNotification closeNotification={Storage.popAndPush} id={note.id} theme={note.theme} title={note.title} subtitle={note.subtitle} message={note.message} />
+      {this.state.value.map((note: Notification, i:number): JSX.Element => {
+        return <PushNotification key={i} closeNotification={Storage.popAndPush} id={note.id} theme={note.theme} title={note.title} subtitle={note.subtitle} closeButton={note.closeButton} message={note.message} styling={note.styling} />
       })}
     </div>
   }
