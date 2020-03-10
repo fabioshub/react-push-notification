@@ -3,6 +3,10 @@ export type Color = 'light' | 'darkblue' | 'red' | undefined;
 
 const defaultDuration = 3000;
 
+/**
+* option: {}
+* @param options This is a object with the following properties:
+*/
 export type Options = {
     title: string,
     subtitle?: string,
@@ -81,10 +85,10 @@ class Storage {
         const styling: Styling = {
             backgroundTop,
             backgroundBottom,
-            colorTop, 
+            colorTop,
             colorBottom
         };
-        const newNotification: Notification = new Notification({title, subtitle, message, theme, styling, closeButton});
+        const newNotification: Notification = new Notification({ title, subtitle, message, theme, styling, closeButton });
         this.Storage.push(newNotification);
         this.setTimer(newNotification.id, duration || defaultDuration);
         this.Listener(this.Storage);
