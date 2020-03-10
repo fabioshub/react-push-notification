@@ -83,7 +83,6 @@ export default Page;
 | ---------------------------------- | ------------------------------------------------------------------ |
 | position `string`            | One of `top-left`, `top-middle`, `top-right`, `bottom-left`, `bottom-middle`, `bottom-right`. Default: `top-left`    |
 
-<img align="right" src="https://imgur.com/YpzhAzC.png" alt="react-push-notification" />
 
 
 ## addNotification({Options}) argument properties
@@ -97,12 +96,21 @@ const options = {
     subtitle: 'subtitle', //optional
     message: 'message', //optional
     theme: 'red', //optional, default: undefined
-    duration: 3000 //optional, default: 5000
+    duration: 3000, //optional, default: 5000,
+    backgroundTop: 'green', //optional, background color of top container.
+    backgroundBottom: 'darkgreen', //optional, background color of bottom container.
+    colorTop: 'green', //optional, font color of top container.
+    colorBottom: 'darkgreen', //optional, font color of bottom container.
+    closeButton: 'Go away' //optional, text or html/jsx element for close text. Default: Close
+
 };
 
 const addNaddNotification: (options: Options) => void;
 
 ```
+
+<img align="right" src="https://imgur.com/YpzhAzC.png" alt="react-push-notification" />
+
 
 The addNotification() function takes an object as argument with the follow properties:
 
@@ -114,4 +122,10 @@ The addNotification() function takes an object as argument with the follow prope
 | message `string`                   | Optional. Message of the push notification                         |
 | theme `string`                     | Optional. One of `darkblue`, `red`, `light`, `undefined`. Default: `undefined`   |
 | duration `number`                  | Optional. Duration of the push notification in ms. Default: 3000   |
+| backgroundTop `string`             | Optional. background color of top container.                       |
+| backgroundBottom `string`          | Optional. background color of bottom container.                    |
+| colorTop `string`                  | Optional. font color of top container.                             |
+| colorBottom `string`               | Optional. font color of bottom container.                          |
+| closeButton `string`               | Optional. text or html/jsx element for close text. Default: `Close`                         |
 
+The custom background or font colors will always override a chosen theme.
