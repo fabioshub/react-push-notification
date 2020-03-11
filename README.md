@@ -7,6 +7,8 @@ Writtin in TypeScript & compiled to JavaScript for robust code.
 
 In app notification system, as well as web native Notification support.
 
+![](https://i.imgur.com/SorfHNa.gif)
+![](https://i.imgur.com/IKppymi.gif)
 
 
 ### Install
@@ -125,7 +127,7 @@ const options = {
 
 };
 
-const addNaddNotification: (options: Options) => void;
+const addNotification: (options: Options) => void;
 
 ```
 
@@ -140,7 +142,7 @@ The addNotification() function takes an object as argument with the follow prope
 | title `string`                     | Required. Title of the push notification                           |
 | subtitle `string`                  | Optional. Subtitle of the push notification                        |
 | message `string`                   | Optional. Message of the push notification                         |
-| onClick `(e: Event | Notification) => void`    | Optional. onClick callback of push notification. When `native: true` e will be of type `Notification`. Else e will be of type `Event`.           |
+| onClick `(e: Event OR Notification) => void`    | Optional. onClick callback of push notification. When `native: true` e will be of type `Notification`. Else e will be of type `Event`.           |
 | theme `string`                     | Optional. One of `darkblue`, `red`, `light`, `undefined`. Default: `undefined`   |
 | duration `number`                  | Optional. Duration of the push notification in ms. Default: 3000   |
 | backgroundTop `string`             | Optional. background color of top container.                       |
