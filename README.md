@@ -163,6 +163,6 @@ The custom background or font colors will always override a chosen theme.
 
 ### Changelog
 
-v1.2.0
+v1.3.0
 
 Added native os push notification support, as well as an onClick callback function.
