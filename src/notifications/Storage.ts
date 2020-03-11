@@ -3,21 +3,27 @@ export type Color = 'light' | 'darkblue' | 'red' | undefined;
 
 const defaultDuration = 3000;
 
-/**
-* option: {}
-* @param options This is a object with the following properties:
-*/
+type voidFunc = () => void;
+export type eventFunc = (e: any) => void;
+
+export type onClickType = voidFunc | eventFunc | undefined;
+
 export type Options = {
     title: string,
     subtitle?: string,
     message?: string,
+    onClick?: onClickType,
     theme?: Color,
     duration?: number,
     backgroundTop?: string,
     backgroundBottom?: string,
     colorTop?: string,
     colorBottom?: string,
-    closeButton?: JSX.Element | string
+    closeButton?: JSX.Element | string,
+    native?: boolean,
+    icon?: string,
+    vibrate?: number | number[],
+    silent?: boolean
 }
 
 export type Styling = {
@@ -27,16 +33,17 @@ export type Styling = {
     colorBottom?: string
 }
 
-export interface PNotification {
+export interface PushNotificationObject {
     title: string;
     subtitle?: string;
     message?: string;
     theme?: Color;
     styling?: Styling;
     closeButton?: JSX.Element | string;
+    onClick?: onClickType;
 }
 
-export class Notification {
+export class PushNotification {
     title: string;
     subtitle?: string;
     message?: string;
@@ -44,7 +51,8 @@ export class Notification {
     id: number;
     styling?: Styling;
     closeButton?: JSX.Element | string;
-    constructor(op: PNotification) {
+    onClick?: onClickType;
+    constructor(op: PushNotificationObject) {
         this.title = op.title;
         this.subtitle = op.subtitle;
         this.message = op.message;
@@ -52,11 +60,12 @@ export class Notification {
         this.id = Math.random();
         this.styling = op.styling;
         this.closeButton = op.closeButton;
+        this.onClick = op.onClick;
     }
 }
 
 class Storage {
-    Storage: Array<Notification> = [];
+    Storage: Array<PushNotification> = [];
     Listener: (storage: any) => void = () => this.Storage;
 
     popAndPush = (NotificationId: number) => {
@@ -76,22 +85,49 @@ class Storage {
         setTimeout(() => this.popAndPush(NotificationId), duration);
     };
 
-    addListener = (listener: (v: Array<Notification>) => void): void => {
+    addListener = (listener: (v: Array<PushNotification>) => void): void => {
         this.Listener = listener;
     };
 
-    addNotification = (options: Options): void => {
-        const { title, subtitle, message, theme, duration, backgroundBottom, backgroundTop, colorBottom, colorTop, closeButton } = options;
+    addNativeNotification = async (options: Options): Promise<void> => {
+        const { title, subtitle, message, duration, icon, vibrate, silent, onClick } = options;
+        if (Notification.permission === 'default' || Notification.permission === 'denied') {
+            await Notification.requestPermission();
+        }
+        if (Notification.permission === 'granted') {
+            const not: Notification = new Notification(title, {
+                body: message,
+                data: subtitle,
+                icon,
+                vibrate,
+                silent
+            });
+            not.onclick = onClick || null;
+            setTimeout(not.close.bind(not), duration || defaultDuration);
+        }
+    };
+
+    addWebNotification = (options: Options): void => {
+        const { title, subtitle, message, theme, duration, backgroundBottom, backgroundTop, colorBottom, colorTop, closeButton, onClick } = options;
         const styling: Styling = {
             backgroundTop,
             backgroundBottom,
             colorTop,
             colorBottom
         };
-        const newNotification: Notification = new Notification({ title, subtitle, message, theme, styling, closeButton });
+        const newNotification: PushNotification = new PushNotification({ title, subtitle, message, theme, styling, closeButton, onClick });
         this.Storage.push(newNotification);
         this.setTimer(newNotification.id, duration || defaultDuration);
         this.Listener(this.Storage);
+    };
+
+    addNotification = async (options: Options): Promise<void> => {
+        const { native } = options;
+        if (native) {
+            return this.addNativeNotification(options);
+        }
+        return this.addWebNotification(options);
+
     };
 }
 

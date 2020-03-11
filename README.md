@@ -5,8 +5,10 @@
 Easy, Type safe & Lightweight push notification library for React.js.
 Writtin in TypeScript & compiled to JavaScript for robust code.
 
-![](https://i.imgur.com/SorfHNa.gif)
+In app notification system, as well as web native Notification support.
 
+![](https://i.imgur.com/SorfHNa.gif)
+![](https://i.imgur.com/IKppymi.gif)
 
 
 ### Install
@@ -19,10 +21,26 @@ or
 npm i react-push-notification
 ```
 
+### Sneakpeak
+
+In app notification example. Regular React components.
+
+![](https://i.imgur.com/SorfHNa.gif)
+
+Web native notification exmaple. Web native components. Send push notifications outside of the browser while the browser is in running in the background or just idle. 
+
+Mac OSX example:
+
+![](https://i.imgur.com/IKppymi.gif)
+![](https://imgur.com/HwA1Bf5.png)
+
+
+
 ### Set-up
 
 Add the Notifications component to the top of your React.js project. 
-This is probably index.js or app.js
+This is probably index.js or app.js. When using `native: true`, this step is not required.
+
 
 ```jsx
 import { Notifications } from 'react-push-notification';
@@ -59,7 +77,8 @@ const Page = () => {
             title: 'Warning',
             subtitle: 'This is a subtitle',
             message: 'This is a very long message',
-            theme: 'darkblue'
+            theme: 'darkblue',
+            native: true // when using native, your OS will handle theming.
         });
     };
 
@@ -95,17 +114,22 @@ const options = {
     title: 'title',
     subtitle: 'subtitle', //optional
     message: 'message', //optional
+    onClick: (e: Event | Notification) => void, //optional, onClick callback.
     theme: 'red', //optional, default: undefined
     duration: 3000, //optional, default: 5000,
     backgroundTop: 'green', //optional, background color of top container.
     backgroundBottom: 'darkgreen', //optional, background color of bottom container.
     colorTop: 'green', //optional, font color of top container.
     colorBottom: 'darkgreen', //optional, font color of bottom container.
-    closeButton: 'Go away' //optional, text or html/jsx element for close text. Default: Close
+    closeButton: 'Go away', //optional, text or html/jsx element for close text. Default: Close,
+    native?: boolean, //optional, makes the push notification a native OS notification
+    icon?: string, // optional, Native only. Sets an icon for the notification.
+    vibrate?: number | number[], // optional, Native only. Sets a vibration for the notification.
+    silent?: boolean // optional, Native only. Makes the notification silent.
 
 };
 
-const addNaddNotification: (options: Options) => void;
+const addNotification: (options: Options) => void;
 
 ```
 
@@ -120,6 +144,7 @@ The addNotification() function takes an object as argument with the follow prope
 | title `string`                     | Required. Title of the push notification                           |
 | subtitle `string`                  | Optional. Subtitle of the push notification                        |
 | message `string`                   | Optional. Message of the push notification                         |
+| onClick `(e: Event OR Notification) => void`    | Optional. onClick callback of push notification. When `native: true` e will be of type `Notification`. Else e will be of type `Event`.           |
 | theme `string`                     | Optional. One of `darkblue`, `red`, `light`, `undefined`. Default: `undefined`   |
 | duration `number`                  | Optional. Duration of the push notification in ms. Default: 3000   |
 | backgroundTop `string`             | Optional. background color of top container.                       |
@@ -127,5 +152,17 @@ The addNotification() function takes an object as argument with the follow prope
 | colorTop `string`                  | Optional. font color of top container.                             |
 | colorBottom `string`               | Optional. font color of bottom container.                          |
 | closeButton `string`               | Optional. text or html/jsx element for close text. Default: `Close`                         |
+| native `boolean`                   | Optional. Turns the notification into a native web notification. Default: `false`  |
+| icon `string`                      | Optional. Native only. Shows an icon in the notification.          |
+| vibrate `number` | `number[]`      | Optional. Native only. Makes the notification vibrate.          |
+| silent `boolean`      | Optional. Native only. Makes the notification silent.          |
+
+
 
 The custom background or font colors will always override a chosen theme.
+
+### Changelog
+
+v1.2.0
+
+Added native os push notification support, as well as an onClick callback function.

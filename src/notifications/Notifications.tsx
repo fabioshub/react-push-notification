@@ -1,5 +1,5 @@
 import React from 'react';
-import Storage, { Notification } from './Storage';
+import Storage, { PushNotification as Not } from './Storage';
 import './Notification.css';
 import PushNotification from './PushNotification';
 
@@ -10,7 +10,7 @@ interface Props {
 }
 
 interface State {
-  value: Array<Notification>;
+  value: Array<Not>;
 }
 
 /**
@@ -29,15 +29,15 @@ class Notifications extends React.Component<Props> {
   };
 
   componentDidMount() {
-    Storage.addListener((v: Array<Notification>): void => this.setState({ value: v }));
+    Storage.addListener((v: Array<Not>): void => this.setState({ value: v }));
   }
 
   render(): JSX.Element {
     const { position } = this.props;
     const classN: string = `rpn-notification-holder ${position || 'top-middle'} supertest`;
     return <div className={classN}>
-      {this.state.value.map((note: Notification, i: number): JSX.Element => {
-        return <PushNotification key={i} closeNotification={Storage.popAndPush} id={note.id} theme={note.theme} title={note.title} subtitle={note.subtitle} closeButton={note.closeButton} message={note.message} styling={note.styling} />
+      {this.state.value.map((note: Not, i: number): JSX.Element => {
+        return <PushNotification key={i} closeNotification={Storage.popAndPush} onClick={note.onClick} id={note.id} theme={note.theme} title={note.title} subtitle={note.subtitle} closeButton={note.closeButton} message={note.message} styling={note.styling} />
       })}
     </div>
   }
