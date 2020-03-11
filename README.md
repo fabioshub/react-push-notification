@@ -32,6 +32,8 @@ Web native notification exmaple. Web native components. Send push notifications 
 Mac OSX example:
 
 ![](https://i.imgur.com/IKppymi.gif)
+![](https://i.imgur.com/IKppymi.png)
+
 
 
 ### Set-up
