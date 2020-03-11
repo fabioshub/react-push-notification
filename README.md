@@ -32,7 +32,7 @@ Web native notification exmaple. Web native components. Send push notifications 
 Mac OSX example:
 
 ![](https://i.imgur.com/IKppymi.gif)
-![](https://i.imgur.com/IKppymi.png)
+![](https://imgur.com/HwA1Bf5.png)
 
 
 
