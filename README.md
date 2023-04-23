@@ -1,13 +1,16 @@
 
 [![npm version](https://badgen.net/npm/v/react-push-notification)](https://www.npmjs.com/package/react-notifications-component)
 
-### Also checkout: React Chat Window + Free Dashboard 🚀
+## Also checkout: React Chat Window + Free Dashboard 🚀
 
 Just released me new product! A react Chat window with a free to use dashboard. Checkout it out at [https://speak-base.com](https://speak-base.com) 
 
 Thank you!
 
 <img width="1000" alt="Screenshot 2023-04-23 at 21 10 50" src="https://user-images.githubusercontent.com/36661261/233860682-c0cb6dd0-86ea-4c60-a5df-b8158938c545.png">
+
+
+--- 
 
 # React-push-notification
 
