@@ -3,9 +3,9 @@
 
 ## Also checkout: React Chat Window + Free Dashboard 🚀
 
-Just released me new product! A react Chat window with a free to use dashboard. Checkout it out at [https://speak-base.com](https://speak-base.com) 
+**Just released me new product! A react Chat window with a free to use dashboard. Checkout it out at [https://speak-base.com](https://speak-base.com)**
 
-Thank you!
+**Thank you! ❤️**
 
 [<img width="1000" alt="Speak Base" src="https://user-images.githubusercontent.com/36661261/233860682-c0cb6dd0-86ea-4c60-a5df-b8158938c545.png">](https://speak-base.com)
 
