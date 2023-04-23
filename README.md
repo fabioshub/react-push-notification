@@ -3,7 +3,7 @@
 
 # Also checkout: React Chat Window + Free Dashboard 🚀
 
-**Just released my new product! A react Chat window with a free to use tier dashboard. Checkout it out at [https://speak-base.com](https://speak-base.com)** or via the repo at [https://github.com/fabioshub/atspeakbase](https://github.com/fabioshub/atspeakbase)
+**Just released my new product! A react Chat window with a free to use tier dashboard. Checkout it out at [https://speak-base.com](https://speak-base.com) or at Github [@speakbase/react-chat-window](https://github.com/fabioshub/atspeakbase)**
 
 **Thank you! ❤️**
 
