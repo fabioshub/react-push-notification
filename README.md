@@ -1,9 +1,9 @@
 
 [![npm version](https://badgen.net/npm/v/react-push-notification)](https://www.npmjs.com/package/react-notifications-component)
 
-## Also checkout: React Chat Window + Free Dashboard 🚀
+# Also checkout: React Chat Window + Free Dashboard 🚀
 
-**Just released me new product! A react Chat window with a free to use dashboard. Checkout it out at [https://speak-base.com](https://speak-base.com)**
+**Just released my new product! A react Chat window with a free to use tier dashboard. Checkout it out at [https://speak-base.com](https://speak-base.com)** to support me.
 
 **Thank you! ❤️**
 
