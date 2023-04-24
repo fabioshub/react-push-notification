@@ -1,6 +1,6 @@
 {
   "name": "react-push-notification",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "description": "React push notifications",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

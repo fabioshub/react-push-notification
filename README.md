@@ -1,5 +1,5 @@
 
-[![npm version](https://badgen.net/npm/v/react-push-notification)](https://www.npmjs.com/package/react-notifications-component)
+[![npm version](https://badgen.net/npm/v/react-push-notification)](https://www.npmjs.com/package/react-oush-notification)
 
 # Also checkout: React Chat Window + Free Dashboard 🚀
 
