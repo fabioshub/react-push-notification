@@ -5,8 +5,6 @@
 
 **Just released my new product! A react Chat window with a free to use tier dashboard. Checkout it out at [https://speak-base.com](https://speak-base.com) or at NPM [@speakbase/react-chat-window](https://www.npmjs.com/package/@speakbase/react-chat-window)**
 
-**Thank you! ❤️**
-
   - React
   - Chat window
   - Free dashboard
@@ -16,6 +14,8 @@
 [<img width="1000" alt="Speak Base" src="https://user-images.githubusercontent.com/36661261/233860682-c0cb6dd0-86ea-4c60-a5df-b8158938c545.png">](https://speak-base.com)
 ### Free dashboard
 [<img width="1000" alt="Screenshot 2023-04-18 at 18 31 59" src="https://user-images.githubusercontent.com/36661261/233898459-84d589b7-b08f-4ddc-9600-3da9f8fb3f23.png">](https://speak-base.com)
+
+**Thank you! ❤️**
 
 --- 
 
