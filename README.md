@@ -3,7 +3,7 @@
 
 # Also checkout: React Chat Window + Free Dashboard 🚀
 
-**Just released my new product! A react Chat window with a free to use tier dashboard. Checkout it out at [https://speak-base.com](https://speak-base.com) or at NPM [@speakbase/react-chat-window](https://www.npmjs.com/package/@speakbase/react-chat-window)**
+**Just released my new product! A react Chat window with a free to use tier dashboard. Check it out at [https://speak-base.com](https://speak-base.com) or at NPM [@speakbase/react-chat-window](https://www.npmjs.com/package/@speakbase/react-chat-window)**
 
   - React
   - Chat window
@@ -19,12 +19,12 @@
 
 --- 
 
-# React-push-notification
+# react-push-notification
 
-Easy, Type safe & Lightweight push notification library for React.js.
-Writtin in TypeScript & compiled to JavaScript for robust code.
+Easy, type-safe, & lightweight push notification library for React.js.
+Written in TypeScript & compiled to JavaScript for robust code.
 
-In app notification system, as well as web native Notification support.
+In-app notification system, as well as web native Notification support.
 
 ![](https://i.imgur.com/SorfHNa.gif)
 ![](https://i.imgur.com/IKppymi.gif)
@@ -42,11 +42,11 @@ npm i react-push-notification
 
 ### Sneakpeak
 
-In app notification example. Regular React components.
+In-app notification example. Regular React components.
 
 ![](https://i.imgur.com/SorfHNa.gif)
 
-Web native notification exmaple. Web native components. Send push notifications outside of the browser while the browser is in running in the background or just idle. 
+Web native notification example. Web native components. Send push notifications outside of the browser while the browser is running in the background or just idle. 
 
 Mac OSX example:
 
@@ -57,8 +57,8 @@ Mac OSX example:
 
 ### Set-up
 
-Add the Notifications component to the top of your React.js project. 
-This is probably index.js or app.js. When using `native: true`, this step is not required.
+Add the notifications component to the top of your React.js project. 
+This is probably `index.js` or `app.js`. When using `native: true`, this step is not required.
 
 
 ```jsx
@@ -84,7 +84,7 @@ export default App;
 
 ### Usage
 
-import the addNotification function and call it.
+import the `addNotification` function and call it.
 
 ```jsx
 import addNotification from 'react-push-notification';
@@ -119,13 +119,13 @@ export default Page;
 
 | Property                               | Description                                   |
 | ---------------------------------- | ------------------------------------------------------------------ |
-| position `string`            | One of `top-left`, `top-middle`, `top-right`, `bottom-left`, `bottom-middle`, `bottom-right`. Default: `top-left`    |
+| position `string`            | One of `top-left`, `top-middle`, `top-right`, `bottom-left`, `bottom-middle`, `bottom-right`.<br/>Default: `top-left`    |
 
 
 
-## addNotification({Options}) argument properties
+## `addNotification({Options})` argument properties
 
-The addNaddNotification() function has the following function type:
+The `addNotification()` function has the following function type:
 
 ```tsx
 
@@ -155,7 +155,7 @@ const addNotification: (options: Options) => void;
 <img align="right" src="https://imgur.com/YpzhAzC.png" alt="react-push-notification" />
 
 
-The addNotification() function takes an object as argument with the follow properties:
+The `addNotification()` function takes an object as argument with the follow properties:
 
 
 | Property                           | Description                                                        |
@@ -163,15 +163,15 @@ The addNotification() function takes an object as argument with the follow prope
 | title `string`                     | Required. Title of the push notification                           |
 | subtitle `string`                  | Optional. Subtitle of the push notification                        |
 | message `string`                   | Optional. Message of the push notification                         |
-| onClick `(e: Event OR Notification) => void`    | Optional. onClick callback of push notification. When `native: true` e will be of type `Notification`. Else e will be of type `Event`.           |
-| theme `string`                     | Optional. One of `darkblue`, `red`, `light`, `undefined`. Default: `undefined`   |
-| duration `number`                  | Optional. Duration of the push notification in ms. Default: 3000   |
+| onClick `(e: Event OR Notification) => void`    | Optional. onClick callback of push notification.<br/>When `native: true` `e` will be of type `Notification`.<br/>Else `e` will be of type `Event`.           |
+| theme `string`                     | Optional. One of `darkblue`, `red`, `light`, `undefined`.<br/>Default: `undefined`   |
+| duration `number`                  | Optional. Duration of the push notification in ms.<br/>Default: 3000   |
 | backgroundTop `string`             | Optional. background color of top container.                       |
 | backgroundBottom `string`          | Optional. background color of bottom container.                    |
 | colorTop `string`                  | Optional. font color of top container.                             |
 | colorBottom `string`               | Optional. font color of bottom container.                          |
-| closeButton `string`               | Optional. text or html/jsx element for close text. Default: `Close`                         |
-| native `boolean`                   | Optional. Turns the notification into a native web notification. Default: `false`  |
+| closeButton `string`               | Optional. text or html/jsx element for close text.<br/>Default: `Close`                         |
+| native `boolean`                   | Optional. Turns the notification into a native web notification. <br/>Default: `false`  |
 | icon `string`                      | Optional. Native only. Shows an icon in the notification.          |
 | vibrate `number` | `number[]`      | Optional. Native only. Makes the notification vibrate.          |
 | silent `boolean`      | Optional. Native only. Makes the notification silent.          |
@@ -184,4 +184,4 @@ The custom background or font colors will always override a chosen theme.
 
 v1.3.0
 
-Added native os push notification support, as well as an onClick callback function.
+Added native OS push notification support, as well as an `onClick` callback function.
